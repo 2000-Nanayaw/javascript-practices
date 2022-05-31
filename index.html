@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<div style="background-color: yellow; height: 80px; width: 20%;">
+		<p>TELL ME NUMBER AND DATE</p>
+		<!-- <button onclick="state()">click me</button> -->
+	<button onclick="getAge(67)">see number</button>
+	<button onclick="Date(45)">see date</button>
+		
+	</div>
+<script>
+let Country = {
+	moroco: "Arica",
+	ghana: "west",
+	asia: "outside",
+	state: function(){
+		return this.moroco+"and"+ this.ghana+"my name is adomah"
+	}
+	
+}
+console.log(Country.state());
+
+const Names ={
+	fname: "nana",
+	sname: "adomah",
+	FLname(){
+		console.log("nana adomah samuel junior")
+	}
+}
+console.log(Names.FLname());
+
+let Room={
+	single: "good",
+	self: "nice",
+	contain: "very good paaa",
+	Fname: function(){
+		console.log(Room.contain)
+	},
+};
+console.log(Room.Fname())
+
+class Human{
+	constructor(fname){
+		this.fname=fname;
+	}
+}
+let ages= new Human("mango")
+console.log(this.fname)
+
+class person {
+	constructor(fname ,lname, gender,age){
+		this.fname=fname;
+		this.lname=lname;
+		this.gender=gender;
+		this.age=age
+	}
+}
+let a = new person("nana","samuel","male",45)
+console.log(a['gender'])
+let b = new person("one","two","three",76)
+console.log(b['age'])
+console.log(a['fname'])
+
+class people{
+	constructor(one,two,float){
+		this.one=one;
+		this.two=two;
+		this.float=float
+	}
+}
+let ethnic = new people("ashanti","bono",657.99)
+console.log(ethnic['float'])
+
+</script>
+<script type="text/javascript" src="js1.js"></script>
+</body>
+</html>

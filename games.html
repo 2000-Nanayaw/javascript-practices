@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="guess.css" />
+    </head>
+    <body>
+        <!-- <div id="main">
+            <h1 id="text">Hey Guess a Number</h1>
+            <p id="para">Enter A Number Between 1 and 20</p>
+            <input type="text" id="input" />
+            <button id="btn">Enter</button>
+        </div> -->
+        <div id="main">
+            <h1>Hey Guess a Number</h1>
+            <p id="para">Enter a Number between 1 and 50</p>
+            <input type="text" id="input" />
+            <button id="btn">click</button>
+            <button id="btn1">playagain</button>
+        </div>
+        <!-- <img  id="image" src="1.png"> -->
+        <script src="guess.js">
+                        let para = document.getElementById("para");
+            let input = document.getElementById("input");
+            let btn = document.getElementById("btn");
+            let btn1 = document.getElementById("btn1");
+            let random = Math.floor(Math.random() * 50);
+            console.log(random);
+            btn.addEventListener("click", function () {
+                let inputVal = input.value;
+                if (inputVal == random) {
+                    para.innerHTML = "you are right";
+                    para.classList.add("win")
+                } else if (inputVal < random && inputVal >= 1) {
+                    para.innerHTML = "Guess again ,this time higher";
+                } else if (inputVal > random && inputVal <= 50) {
+                    para.innerHTML = "Guess again ,this time lower";
+                } else if (inputVal > 50 || inputVal < 1) {
+                    para.innerHTML = "chairman Wosop";
+                }
+                // else (isNaN(inputVal))
+                // {
+                else {
+                    para.innerHTML = "if i slap  you now";
+                }
+            });
+            btn1.addEventListener("click", function () {
+                location.reload();
+            });
+        </script>
+    </body>
+</html>

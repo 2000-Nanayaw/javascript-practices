@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+		
+let names={
+	fname: "nana",
+	sname: "adomah",
+	age: 67,
+	Days: function(){
+		return this.fname + this.sname
+	
+	}
+}
+   console.log(names.Days())
+   console.log(names.age)
+
+let family= {
+	one: "nuclear",
+	two: "extended",
+	three: function(){
+		console.log(`i am ${family.one} and my brother is ${family.two}`)
+	}
+}
+
+family.three();
+
+let weeks={
+	dayone: "monday",
+	daytwo: "tuesday",
+	total: 2,
+	all(){
+		console.log(`${weeks.dayone} is holiday`)
+	},
+	jnr(){
+		console.log(`${weeks.daytwo} is holiday`)
+	}
+}
+weeks.all()
+weeks.jnr()
+console.log(weeks);
+
+class cars{
+	constructor(cfname,csname,cnumber){
+		this.cfname= cfname;
+		this.csname=csname;
+		this.cnumber=cnumber;
+	}
+}
+
+var a= new cars("toyota","camri",55)
+let b= new cars("hammer","lincon",44)
+console.log(a['cnumber']);
+console.log(b['cfname'],['csname'])
+
+
+//js classes
+
+class basic6{
+	constructor(fname,sname,age){
+		this.fname=fname;
+		this.sname=sname;
+		this.age=age;
+
+	}
+	
+
+}
+
+class basic5 extends basic6{
+
+}
+
+
+let y = new basic6("kwame","asare",34);
+let x = new basic6("nana","adomah",44);
+let t = new basic6("joycelin","bentil",77);
+
+console.log(t['fname'])
+console.log(x["age"],['sname'])
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>
